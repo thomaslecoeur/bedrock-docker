@@ -1,4 +1,4 @@
-FROM php:8.0-fpm as base
+FROM php:8.2-fpm as base
 LABEL name=bedrock
 LABEL intermediate=true
 
@@ -54,7 +54,7 @@ FROM php as bedrock
 LABEL name=bedrock
 
 # Install nginx & supervisor
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash \
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash \
   && apt-get update \
   && apt-get install -y \
     nginx \
